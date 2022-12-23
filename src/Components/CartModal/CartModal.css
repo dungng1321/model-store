@@ -1,0 +1,230 @@
+.cart-modal {
+    position: fixed;
+    z-index: 9999999;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-height: 100vh;
+    width: 420px;
+    padding: 104px 50px 50px;
+    background-color: rgba(183, 218, 255, 0.25);
+    /* backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #e3e3e3;
+}
+
+.backdrop-background {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.cart-lottie {
+    text-align: center;
+    margin: 25px 0 10px 0 !important;
+}
+
+.cart-lottie-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-lottie-container .lf-player-container {
+    display: contents;
+}
+
+.close-cart-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.close-cart-btn:hover {
+    transform: rotate(90deg);
+    color: var(--color-red);
+}
+
+.checkout-btn,
+.view-cart-btn {
+    text-decoration: none;
+}
+
+.view-cart {
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.3vw;
+    cursor: pointer;
+    padding: 10px 1vw;
+    background: rgba(183, 218, 255, 0.25);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.5s;
+}
+
+.checkout {
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.3vw;
+    cursor: pointer;
+    padding: 10px 1.55vw;
+    background: rgba(183, 218, 255, 0.25);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.5s;
+}
+
+.view-cart:hover,
+.checkout:hover {
+    background: rgba(183, 218, 255, 0.4);
+}
+
+.cart-items {
+    height: 55%;
+}
+
+.lists {
+    height: 100%;
+    overflow: auto;
+}
+
+.lists::-webkit-scrollbar {
+    background: #151918;
+    width: 5px;
+}
+
+.cart-items h3 {
+    text-align: center;
+}
+
+.subTotal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-bottom {
+    width: 100%;
+    /* background-color: rgb(138, 138, 150); */
+    position: relative;
+    z-index: 10;
+    /* border-top: 1px solid rgba(255, 255, 255, 0.18); */
+
+}
+
+.product-item {
+    display: inline-flex;
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.product-item .product-img {
+    width: 80px;
+    height: 100px;
+    margin-right: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.product-item .product-info {
+    width: 13.3vw;
+}
+
+.product-item .product-info a {
+    text-decoration: none;
+    color: var(--color-blue);
+}
+
+.product-item .product-info .product-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.product-item .product-info .product-name:hover {
+    text-decoration: underline;
+    color: var(--color-blue);
+}
+
+.product-item .delete-product {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.product-item .delete-product:hover {
+    color: var(--color-red);
+}
+
+.product-item .delete-product:active {
+    animation: press 0.2s 1 linear;
+}
+
+@keyframes press {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.92);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* ========================= RESPONSIVE ========================== */
+
+
+/* ====== Tablet: width >= 740px and < 1024px  */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+
+    .view-cart,
+    .checkout {
+        font-size: 1.8vw;
+    }
+}
+
+/* ====== Mobile: width < 740px  */
+@media only screen and (max-width: 46.1875em) {
+
+
+    .cart-modal {
+        min-height: 100vh;
+        width: 250px;
+        padding: 104px 5px 50px;
+    }
+
+    .view-cart,
+    .checkout {
+        font-size: 3vw;
+        border-radius: 7px;
+    }
+
+    .product-item .product-info {
+        width: 25.3vw;
+    }
+}

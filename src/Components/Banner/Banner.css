@@ -1,0 +1,189 @@
+/* ====== Hero Section ========= */
+.banner {
+    background-image: url(../../data/backgroundbanner.jpg);
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    position: relative;
+}
+
+.banner .container {
+    height: 100vh;
+    position: relative;
+    padding: 0 7vw;
+}
+
+.banner-left-cover {
+    background: linear-gradient(77deg, rgba(0, 0, 0, .6), transparent 85%);
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 26.09%;
+    top: 0;
+    transition: opacity .5s;
+}
+
+.banner-bottom-cover {
+    background-color: transparent;
+    background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+    background-position: 0 top;
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    bottom: -18%;
+    height: 30.7vw;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: auto;
+    width: 100%;
+}
+
+.banner .content {
+    position: absolute;
+    top: 30%;
+    width: 40%;
+    color: var(--text-color);
+}
+
+.banner .content h1 {
+    font-family: Lobster, sans-serif;
+    font-size: 5.5vw;
+    margin-bottom: 2vw;
+}
+
+.banner .content h3 {
+    font-size: 1.7vw;
+    margin-bottom: 2.5vw;
+
+}
+
+.content .banner-btn {
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--text-color);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.2vw;
+    font-weight: 600;
+    padding: 0.7vw 1vw;
+    background: rgba(183, 218, 255, 0.25);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.5s;
+}
+
+.content .banner-btn:hover {
+    background: rgba(183, 218, 255, 0.4);
+}
+
+.content .banner-btn:active {
+    animation: press 0.2s 1 linear;
+}
+
+@keyframes press {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.92);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* ============ RESPONSIVE ============= */
+
+/* ====== Tablet: width >= 740px and < 1024px  */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+
+    .banner-left-cover {
+        background: linear-gradient(77deg, rgba(0, 0, 0, .7), transparent 80%);
+    }
+
+    .banner .content {
+        top: 30%;
+        width: 45%;
+    }
+
+    .banner .content h1 {
+        font-family: Lobster, sans-serif;
+        font-size: 6.5vw;
+        margin-bottom: 3vw;
+    }
+
+    .banner .content h3 {
+        font-size: 2vw;
+        margin-bottom: 5.5vw;
+
+    }
+
+    .content .banner-btn {
+        font-size: 1.8vw;
+    }
+
+    .content .banner-btn {
+        padding: 1.7vw 1vw;
+    }
+
+    .banner-bottom-cover {
+        /* bottom: -1px;
+        height: 14.7vw; */
+        bottom: -14%;
+        height: 34.7vw;
+        left: 0;
+        opacity: 1;
+    }
+
+}
+
+
+
+/* ====== Mobile: width < 740px  */
+@media only screen and (max-width: 46.1875em) {
+
+    .banner-left-cover {
+        background: linear-gradient(77deg, rgba(0, 0, 0, .8), transparent 100%);
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+        right: 0%;
+        top: 0;
+    }
+
+    .banner .content {
+        position: absolute;
+        top: 30%;
+        width: 80%;
+    }
+
+    .banner .content h1 {
+        font-family: Lobster, sans-serif;
+        font-size: 11.5vw;
+        margin-bottom: 5vw;
+    }
+
+    .banner .content h3 {
+        font-size: 4.7vw;
+        margin-bottom: 7.5vw;
+    }
+
+    .content .banner-btn {
+        font-size: 3.2vw;
+        padding: 2.7vw 2vw;
+        border-radius: 10px;
+    }
+
+
+    .banner-bottom-cover {
+        bottom: -6%;
+        height: 34.7vw;
+        left: 0;
+    }
+
+
+}

@@ -1,0 +1,20 @@
+.fly-to-cart {
+    position: absolute;
+    z-index: 50;
+    /* animation: fly 1s ease ; */
+    /* transition: 1s; */
+}
+
+@keyframes fly {
+    0% {
+        transform: scale(1);
+        top: 0;
+        right: 0;
+    }
+    100% {
+        top: -30vw;
+        right: -60vw;
+        transform: scale(0);
+
+    }
+}

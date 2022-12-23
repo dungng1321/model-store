@@ -1,0 +1,173 @@
+.footer {
+    /* height: 50vh; */
+    padding: 0 7vw;
+    padding-top: 100px;
+    color: var(--text-light-color);
+    position: relative;
+    background-image: url('../../data/steam.png');
+    background-size: cover;
+}
+
+.footer .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .content .logo img {
+    height: 3vw;
+}
+
+
+.footer .logo {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.footer .content .about {
+    margin-top: 30px;
+}
+
+.footer .content .about .about-content h3,
+.footer .content .contact .contact-info h3,
+.footer .content .customer-sp h3,
+.footer .content .contact .contact-info h4 {
+    margin-bottom: 10px;
+}
+
+.footer .content .contact .contact-info p {
+    margin-bottom: 5px;
+}
+
+.footer .content .about .about-content p {
+    line-height: 1.4;
+}
+
+.footer .content .contact .contact-info .social-icons .icon {
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 10px;
+    font-size: 30px;
+    transition: 0.2s;
+}
+
+.footer .content .contact .contact-info .social-icons .icon:hover {
+    color: var(--color-blue);
+}
+
+
+.footer .content .customer-sp input {
+    padding: 0 20px;
+    font-size: 1.2vw;
+    font-family: 'Work Sans', sans-serif;
+    color: var(--text-color);
+}
+
+.footer .content .customer-sp input[type="text"] {
+    height: 40px;
+    width: 20vw;
+    border: none;
+    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgba(0, 0, 0, .5);
+    transition: 0.5s;
+}
+
+.footer .content .customer-sp input[type="text"]:focus {
+    /* background-color: var(--text-color); */
+    color: var(--text-color);
+    background: rgba(183, 218, 255, 0.25);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.footer .content .customer-sp .subcribe-icon {
+    background-color: rgba(0, 0, 0, .5);
+    margin-left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, .5);
+    margin-left: 0;
+    padding: 8px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+
+
+
+.footer .copy-right {
+    margin: 50px 0 30px 0;
+}
+
+/* ========================= RESPONSIVE ========================== */
+
+
+/* ====== Tablet: width >= 740px and < 1024px  */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+
+
+    .footer .content .logo img {
+        height: 5vw;
+    }
+
+
+    .footer .content {
+        flex-wrap: wrap;
+    }
+
+    .footer .logo {
+        width: 50%;
+    }
+
+    .footer .customer-sp {
+        margin-top: 30px;
+    }
+
+    .footer .content .customer-sp input {
+        font-size: 2vw;
+    }
+
+    .footer .content .customer-sp input[type="text"] {
+        height: 40px;
+        width: 35vw;
+    }
+}
+
+
+/* ====== Mobile: width < 740px  */
+@media only screen and (max-width: 46.1875em) {
+
+
+    .footer .content .logo img {
+        height: 10vw;
+    }
+
+    .footer .content {
+        flex-direction: column;
+    }
+
+    .footer .logo {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .footer .content .customer-sp input {
+        font-size: 3.5vw;
+    }
+
+    .footer .content .customer-sp input[type="text"] {
+        height: 40px;
+        width: 50vw;
+    }
+
+    .footer .content .contact {
+        margin-bottom: 30px;
+    }
+}
