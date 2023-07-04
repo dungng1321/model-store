@@ -64,7 +64,7 @@ function Footer() {
       </div>
 
       <div className="copy-right">
-        Copyright © 2022 FIGIMAN | Built with React by NGDUNG1321.
+        Copyright © 2022 FIGIMAN | Built with React by Nguyen Duc Dung.
       </div>
     </footer>
   )
